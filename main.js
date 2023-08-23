@@ -7,7 +7,7 @@ function palindromeTester(event) {
     let palindromeResult = document.querySelector("#palindromeResult");
 
     if  (phrase.palindrome()) {
-        palindromeResult.innerHTML = `"<strong>${phrase.content}</strong>"はパリンドロームです！`;
+        palindromeResult.innerHTML = `"${phrase.content}"はパリンドロームです！`;
     } else {
         palindromeResult.innerHTML = `"${phrase.content}"はパリンドロームではありません`;
     }
