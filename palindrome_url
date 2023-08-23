@@ -1,0 +1,18 @@
+#!/Users/arakawaken/.nodebrew/current/bin/node
+
+let urllib = require("urllib");
+let Phrase = require("ken-palindrome");
+let url = 'https://cdn.learnenough.com/phrases.txt'
+
+async function fetchPalindromes() {
+    let { error, data, response } = await urllib.request(url, { followRedirect: true });
+    let body = data.toString();
+    body.split('\n').forEach(function (line) {
+        let phrase = new Phrase(line);
+        if (phrase.palindrome() ){
+            console.log('検出されたパリンドローム: ', line);
+        }
+    });
+}
+
+fetchPalindromes();

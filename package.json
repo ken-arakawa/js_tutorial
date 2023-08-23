@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "ken-palindrome": "^0.2.0"
+    "jsdom": "^22.1.0",
+    "ken-palindrome": "^0.2.0",
+    "urllib": "^3.18.0"
   }
 }
